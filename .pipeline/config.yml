@@ -1,0 +1,45 @@
+general:
+  verbose: true
+  collectTelemetryData: false
+ 
+steps:
+  mtaBuild:
+    dockerImage: 'devxci/mbtci-alpine'
+  cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+    dockerImage: 'ppiper/cf-cli'
+    cloudFoundry:
+      org: 'pipertest'
+      space: 'J333'
+      credentialsId: 'CF_CREDENTIALSID'
+  transportRequestUploadCTS:
+    changeManagement:
+      credentialsId: 'CTS_CREDENTIALS_ID'
+      endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000/sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV'
+    applicationName: 'CWB4NA'
+    abapPackage: 'MHOLL'
+    transportRequestId: 'A5DK000102'
+    dockerImage: 'rstengel/fiori'
+  transportRequestUploadRFC:
+    changeManagement:
+      credentialsId: 'RFC_CREDENTIALS_ID'
+      endpoint: 'wdflbmd16301.wdf.sap.corp'
+    dockerImage: 'rstengel/node-rfc'
+  transportRequestUploadSOLMAN:
+    dockerImage: 'rstengel/cm-client-sap-cert'
+  transportRequestUploadFile:
+    changeManagement:
+      type: 'CTS'
+      credentialsId: 'CTS_CREDENTIALS_ID'
+      endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000/sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV'
+      client: '001'
+      cts:
+        nodeDocker:
+          image: 'rstengel/fiori'
+          pullImage: true
+        npmInstallOpts: []
+        deployToolDependencies: []
+    applicationName: 'CWB4NA'
+    abapPackage: 'MHOLL'
+    transportRequestId: 'A5DK000102'
