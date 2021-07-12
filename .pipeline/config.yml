@@ -21,6 +21,8 @@ steps:
     abapPackage: 'MHOLL'
     transportRequestId: 'A5DK000102'
     dockerImage: 'rstengel/fiori'
+    npmInstallOpts: []
+    deployToolDependencies: []
   transportRequestUploadRFC:
     changeManagement:
       credentialsId: 'RFC_CREDENTIALS_ID'
