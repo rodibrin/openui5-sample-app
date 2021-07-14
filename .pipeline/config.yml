@@ -20,7 +20,7 @@ steps:
     applicationName: 'RDSTR-CTS-APP'
     abapPackage: 'RDSTE'
     transportRequestId: 'A5DK000102'
-    dockerImage: 'rstengel/fiori'
+#    dockerImage: 'rstengel/fiori'
 #    npmInstallOpts: []
 #    deployToolDependencies: []
   transportRequestUploadRFC:
@@ -36,10 +36,10 @@ steps:
       credentialsId: 'CTS_CREDENTIALS_ID'
       endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000/sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV'
       client: '001'
-      cts:
-        nodeDocker:
-          image: 'rstengel/fiori'
-          pullImage: true
+#      cts:
+#        nodeDocker:
+#          image: 'rstengel/fiori'
+#          pullImage: true
 #        npmInstallOpts: []
 #        deployToolDependencies: []
     applicationName: 'RDSTR-CTS-UF-APP'
