@@ -1,10 +1,30 @@
 general:
   verbose: true
   collectTelemetryData: false
- 
+  
+stages:
+  UploadSOL:
+    changeManagement:
+      type: 'SOLMAN'
+      credentialsId: 'SOL_CREDENTIALS_ID'
+      endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000/sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV'
+      client: '001'
+    applicationName: 'RDSTR-SOL-UF-APP'
+    abapPackage: 'RDSPACK'
+    
+  UploadCTS:
+    changeManagement:
+      type: 'CTS'
+      credentialsId: 'CTS_CREDENTIALS_ID'
+      endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000/sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV'
+      client: '001'
+    applicationName: 'RDSTR-CTS-UF-APP'
+    abapPackage: 'RDSPACK'
+    
 steps:
   mtaBuild:
     dockerImage: 'devxci/mbtci-alpine'
+    
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
@@ -13,24 +33,27 @@ steps:
       org: 'pipertest'
       space: 'J333'
       credentialsId: 'CF_CREDENTIALSID'
+      
   transportRequestUploadCTS:
     changeManagement:
       credentialsId: 'CTS_CREDENTIALS_ID'
       endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000/sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV'
     applicationName: 'RDSTR-CTS-APP'
-    abapPackage: 'RDSTE'
-    transportRequestId: 'A5DK000102'
+    abapPackage: 'RDSPACK'
 #    dockerImage: 'rstengel/fiori'
 #    npmInstallOpts: []
 #    deployToolDependencies: []
+
   transportRequestUploadRFC:
     changeManagement:
       credentialsId: 'RFC_CREDENTIALS_ID'
       endpoint: 'wdflbmd16301.wdf.sap.corp'
     dockerImage: 'rstengel/node-rfc'
+    
   transportRequestUploadSOLMAN:
     dockerImage: 'rstengel/cm-client-sap-cert'
-  transportRequestUploadFile:
+    
+  xtransportRequestUploadFile:
     changeManagement:
       type: 'CTS'
       credentialsId: 'CTS_CREDENTIALS_ID'
@@ -43,5 +66,4 @@ steps:
 #        npmInstallOpts: []
 #        deployToolDependencies: []
     applicationName: 'RDSTR-CTS-UF-APP'
-    abapPackage: 'RDSTE'
-    transportRequestId: 'A5DK000102'
+    abapPackage: 'RDSPACK'
