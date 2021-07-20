@@ -9,6 +9,7 @@ stages:
       credentialsId: 'SOLMAN_CREDENTIALS_ID'
       endpoint: 'https://wdflbmd21817.wdf.sap.corp:50001/sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV'
     applicationName: 'RDSTR-SOL-UF-APP'
+    applicationId: 'HCP'
     abapPackage: 'RDSPACK'
     
   UploadCTS:
