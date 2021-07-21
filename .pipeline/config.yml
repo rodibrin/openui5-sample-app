@@ -4,11 +4,13 @@ general:
   
 stages:
   UploadSOL:
-    dockerImage: 'rstengel/cm-client-sap-cert'
     changeManagement:
       type: 'SOLMAN'
       credentialsId: 'SOLMAN_CREDENTIALS_ID'
       endpoint: 'https://wdflbmd21817.wdf.sap.corp:50001/sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV'
+      solman:
+        docker:
+          image: 'rstengel/cm-client-sap-cert'
     applicationName: 'RDSTR-SOL-UF-APP'
     applicationId: 'HCP'
     abapPackage: 'RDSPACK'
