@@ -11,7 +11,7 @@ stages:
       solman:
         docker:
           image: 'rstengel/cm-client-sap-cert'
-    applicationName: 'RDSTR_SOL_UF_APP'
+    applicationName: 'RDSTR_SOL_APP'
     applicationId: 'HCP'
     abapPackage: 'RDSPACK'
     
@@ -22,7 +22,7 @@ stages:
 #      endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000/sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV'
       endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000'
       client: '001'
-    applicationName: 'RDSTR_CTS_UF_APP'
+    applicationName: 'RDSTR_CTS_APP'
     abapPackage: 'RDSPACK'
     
 steps:
@@ -69,5 +69,5 @@ steps:
 #          pullImage: true
 #        npmInstallOpts: []
 #        deployToolDependencies: []
-    applicationName: 'RDSTR_CTS_UF_APP'
+    applicationName: 'RDSTR_CTS_APP'
     abapPackage: 'RDSPACK'
