@@ -41,7 +41,7 @@ steps:
   transportRequestUploadCTS:
     changeManagement:
       credentialsId: 'CTS_CREDENTIALS_ID'
-#      endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000/sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV'
+      endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000/sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV'
     applicationName: 'RDSTR_CTS_APP'
     abapPackage: 'RDSPACK'
 #    dockerImage: 'rstengel/fiori'
