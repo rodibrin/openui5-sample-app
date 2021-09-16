@@ -38,6 +38,16 @@ steps:
       space: 'J333'
       credentialsId: 'CF_CREDENTIALSID'
       
+  isChangeInDevelopment:
+    dockerImage: 'rstengel/cm-client-sap-cert'
+    
+  checkChangeInDevelopment:
+    changeManagement:
+      type: 'SOLMAN'
+      solman:
+        docker:
+          image: 'rstengel/cm-client-sap-cert'
+    
   transportRequestUploadCTS:
     changeManagement:
       credentialsId: 'CTS_CREDENTIALS_ID'
