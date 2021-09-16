@@ -48,7 +48,7 @@ steps:
       endpoint: 'https://wdflbmd21817.wdf.sap.corp:50001/sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV'
       solman:
         docker:
-          image: 'rstengel/cm-client-sap-cert'
+          image: ''
     
   transportRequestUploadCTS:
     changeManagement:
