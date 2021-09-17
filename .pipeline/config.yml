@@ -10,7 +10,7 @@ general:
         image: 'rstengel/cm-client-sap-cert'
         options: ['o1','opt1']
         envVars: 
-          e1, 'env1'
+          e1: 'env1'
         pullImage: true
   
 stages:
