@@ -1,6 +1,17 @@
 general:
   verbose: true
   collectTelemetryData: false
+  changeManagement:
+    type: 'SOLMAN'
+    credentialsId: 'SOLMAN_CREDENTIALS_ID'
+    endpoint: 'https://wdflbmd21817.wdf.sap.corp:50001/sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV'
+    solman:
+      docker:
+        image: 'rstengel/cm-client-sap-cert'
+        pullImage: true
+  applicationName: 'RDSTR_SOL_APP'
+  applicationId: 'HCP'
+  abapPackage: 'RDSPACK'
   
 stages:
   UploadSOL:
