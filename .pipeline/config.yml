@@ -9,9 +9,6 @@ general:
       docker:
         image: 'rstengel/cm-client-sap-cert'
         pullImage: true
-  applicationName: 'RDSTR_SOL_APP'
-  applicationId: 'HCP'
-  abapPackage: 'RDSPACK'
   
 stages:
   UploadSOL:
@@ -94,4 +91,9 @@ steps:
 #        npmInstallOpts: []
 #        deployToolDependencies: []
     applicationName: 'RDSTR_CTS_APP'
+    abapPackage: 'RDSPACK'
+
+  transportRequestUploadFile:
+    applicationName: 'RDSTR_SOL_APP'
+    applicationId: 'HCP'
     abapPackage: 'RDSPACK'
