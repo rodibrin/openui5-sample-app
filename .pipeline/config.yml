@@ -76,7 +76,8 @@ steps:
     changeManagement:
       credentialsId: 'RFC_CREDENTIALS_ID'
       endpoint: 'wdflbmd16301.wdf.sap.corp'
-    dockerImage: 'rstengel/node-rfc'
+#    dockerImage: 'rstengel/node-rfc'
+    dockerImage: 'docker.wdf.sap.corp:51006/piper/node-rfc:1.0.0'
     
   transportRequestUploadSOLMAN:
     dockerImage: 'rstengel/cm-client-sap-cert'
