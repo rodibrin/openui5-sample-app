@@ -7,7 +7,7 @@ general:
     endpoint: 'https://wdflbmd21817.wdf.sap.corp:50001/sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV'
     solman:
       docker:
-        image: 'rstengel/cm-client-sap-cert'
+        image: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
         options: ['o1','opt1']
         envVars: 
           e1: 'env1'
@@ -21,7 +21,7 @@ stages:
       endpoint: 'https://wdflbmd21817.wdf.sap.corp:50001/sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV'
       solman:
         docker:
-          image: 'rstengel/cm-client-sap-cert'
+          image: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
     applicationName: 'RDSTR_SOL_APP'
     applicationId: 'HCP'
     abapPackage: 'RDSPACK'
@@ -50,10 +50,10 @@ steps:
       credentialsId: 'CF_CREDENTIALSID'
       
 #  isChangeInDevelopment:
-#    dockerImage: 'rstengel/cm-client-sap-cert'
+#    dockerImage: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
 #    
   checkChangeInDevelopment:
-    dockerImage: 'rstengel/cm-client-sap-cert'
+    dockerImage: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
     changeManagement:
       type: 'SOLMAN'
       credentialsId: 'SOLMAN_CREDENTIALS_ID'
@@ -68,7 +68,7 @@ steps:
       endpoint: 'http://wdflbmd16301.wdf.sap.corp:8000/sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV'
     applicationName: 'RDSTR_CTS_APP'
     abapPackage: 'RDSPACK'
-#    dockerImage: 'rstengel/fiori'
+#    dockerImage: 'd046169-docker.int.repositories.cloud.sap/fiori'
 #    npmInstallOpts: []
 #    deployToolDependencies: []
 
@@ -76,11 +76,10 @@ steps:
     changeManagement:
       credentialsId: 'RFC_CREDENTIALS_ID'
       endpoint: 'wdflbmd16301.wdf.sap.corp'
-#    dockerImage: 'rstengel/node-rfc'
-    dockerImage: 'docker.wdf.sap.corp:51006/piper/node-rfc:1.0.0'
+    dockerImage: 'd046169-docker.int.repositories.cloud.sap/node-rfc'
     
   transportRequestUploadSOLMAN:
-    dockerImage: 'rstengel/cm-client-sap-cert'
+    dockerImage: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
     
   xtransportRequestUploadFile:
     changeManagement:
@@ -90,7 +89,7 @@ steps:
       client: '001'
 #      cts:
 #        nodeDocker:
-#          image: 'rstengel/fiori'
+#          image: 'd046169-docker.int.repositories.cloud.sap/fiori'
 #          pullImage: true
 #        npmInstallOpts: []
 #        deployToolDependencies: []
