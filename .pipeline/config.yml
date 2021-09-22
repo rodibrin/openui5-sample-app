@@ -49,9 +49,9 @@ steps:
       space: 'J333'
       credentialsId: 'CF_CREDENTIALSID'
       
-#  isChangeInDevelopment:
-#    dockerImage: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
-#    
+  isChangeInDevelopment:
+    dockerImage: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
+    
   checkChangeInDevelopment:
     dockerImage: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
     changeManagement:
