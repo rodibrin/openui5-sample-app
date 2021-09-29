@@ -99,3 +99,5 @@ steps:
     applicationName: 'RDSTR_SOL_APP'
     applicationId: 'HCP'
     abapPackage: 'RDSPACK'
+    changeManagement:
+      clientOpts: []
