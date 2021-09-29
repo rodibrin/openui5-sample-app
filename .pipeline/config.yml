@@ -52,15 +52,15 @@ steps:
   isChangeInDevelopment:
     dockerImage: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
     
-  checkChangeInDevelopment:
-    dockerImage: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
-    changeManagement:
-      type: 'SOLMAN'
-      credentialsId: 'SOLMAN_CREDENTIALS_ID'
-      endpoint: 'https://wdflbmd21817.wdf.sap.corp:50001/sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV'
-      solman:
-        docker:
-          image: ''
+#  checkChangeInDevelopment:
+#    dockerImage: 'd046169-docker.int.repositories.cloud.sap/cm-client-sap-cert'
+#    changeManagement:
+#      type: 'SOLMAN'
+#      credentialsId: 'SOLMAN_CREDENTIALS_ID'
+#      endpoint: 'https://wdflbmd21817.wdf.sap.corp:50001/sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV'
+#      solman:
+#        docker:
+#         image: ''
     
   transportRequestUploadCTS:
     changeManagement:
