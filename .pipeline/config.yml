@@ -1,0 +1,11 @@
+general:
+  buildTool: 'npm'
+  
+steps:
+  npmExecuteScripts:
+    dockerImage: 'fromSteps'
+
+stages:
+  build:
+    npmExecuteScripts:
+    dockerImage: 'fromStages'
