@@ -7,5 +7,4 @@ steps:
 
 stages:
   build:
-    npmExecuteScripts:
-      dockerImage: 'fromStages'
+    dockerImage: 'fromStages'
